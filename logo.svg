@@ -1,0 +1,59 @@
+<svg viewBox="0 0 224 76" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zero Trust Forge">
+  <defs>
+    <!-- Shield gradient: cyan top-left → purple bottom-right -->
+    <linearGradient id="shieldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <!-- Wordmark gradient: cyan → purple, horizontal -->
+    <linearGradient id="wordGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <!-- Inner shadow on anvil for depth -->
+    <filter id="innerShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1" flood-color="#000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- ── SHIELD ── -->
+  <path d="M33 3 L60 14 L60 43 C60 56 48 65 33 70 C18 65 6 56 6 43 L6 14 Z"
+        fill="url(#shieldGrad)"/>
+
+  <!-- Shield inner edge (subtle depth ring) -->
+  <path d="M33 9 L55 18 L55 43 C55 53 44 61 33 65 C22 61 11 53 11 43 L11 18 Z"
+        fill="none" stroke="white" stroke-width="0.75" opacity="0.15"/>
+
+  <!-- ── FORGE SPARKS (above anvil) ── -->
+  <line x1="25" y1="27" x2="21" y2="18" stroke="white" stroke-width="2"   stroke-linecap="round" opacity="0.65"/>
+  <line x1="33" y1="26" x2="33" y2="16" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+  <line x1="41" y1="27" x2="45" y2="18" stroke="white" stroke-width="2"   stroke-linecap="round" opacity="0.65"/>
+  <!-- Spark dots at tips -->
+  <circle cx="21" cy="17" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="33" cy="15" r="2"   fill="white" opacity="0.65"/>
+  <circle cx="45" cy="17" r="1.5" fill="white" opacity="0.5"/>
+
+  <!-- ── ANVIL ── -->
+  <!-- Body: pentagon with left horn -->
+  <path d="M11 38 L19 31 L47 31 L47 42 L19 42 Z"
+        fill="white" opacity="0.97" filter="url(#innerShadow)"/>
+  <!-- Neck -->
+  <rect x="24" y="42" width="18" height="5" rx="1.5"
+        fill="white" opacity="0.97"/>
+  <!-- Base -->
+  <rect x="15" y="47" width="36" height="9" rx="3"
+        fill="white" opacity="0.97" filter="url(#innerShadow)"/>
+
+  <!-- ── WORDMARK ── -->
+  <!-- "ZERO TRUST" — small caps label -->
+  <text x="79" y="29"
+        font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
+        font-size="10" font-weight="600" letter-spacing="0.22em"
+        fill="#8896b3">ZERO TRUST</text>
+
+  <!-- "FORGE" — large gradient display word -->
+  <text x="77" y="61"
+        font-family="Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
+        font-size="33" font-weight="800" letter-spacing="-0.025em"
+        fill="url(#wordGrad)">FORGE</text>
+</svg>
