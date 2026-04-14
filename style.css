@@ -150,9 +150,8 @@ ul { list-style: none; }
 .nav__inner {
   display: flex;
   align-items: center;
-  height: 88px;
+  height: 68px;
   gap: 32px;
-  padding: 8px 0;
 }
 
 .nav__logo {
@@ -166,10 +165,46 @@ ul { list-style: none; }
   margin-right: auto;
 }
 
-.nav__logo-img {
-  height: 72px;
+.nav__logo-icon {
+  height: 36px;
   width: auto;
-  display: block;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.3));
+}
+
+.footer__brand .nav__logo-icon {
+  height: 56px;
+}
+
+.footer__brand .nav__logo-sub {
+  font-size: 0.72rem;
+}
+
+.footer__brand .nav__logo-main {
+  font-size: 1.5rem;
+}
+
+.nav__logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.nav__logo-sub {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--text-dim);
+}
+
+.nav__logo-main {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  background: linear-gradient(135deg, #00d4ff, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .nav__links {
@@ -441,6 +476,8 @@ ul { list-style: none; }
 .tool-card:nth-child(2) .tool-card__logo { color: #f5a623; }  /* Vault: amber */
 .tool-card:nth-child(3) .tool-card__logo { color: #326ce5; }  /* K8s: blue */
 .tool-card:nth-child(4) .tool-card__logo { color: #ff6b6b; }  /* Kyverno: red */
+.tool-card:nth-child(5) .tool-card__logo { color: #844fba; }  /* Terraform: purple */
+.tool-card:nth-child(6) .tool-card__logo { color: #ef7b4d; }  /* Argo CD: orange */
 
 .tool-card__logo svg {
   width: 100%;
