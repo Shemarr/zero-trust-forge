@@ -122,6 +122,22 @@ form.addEventListener('submit', async (e) => {
   });
 });
 
+// NAV: active section highlight
+const navLinks = document.querySelectorAll('.nav__links a');
+const sections = document.querySelectorAll('section[id]');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+      });
+    }
+  });
+}, { threshold: 0.35 });
+
+sections.forEach(s => sectionObserver.observe(s));
+
 // SCROLL ANIMATIONS: fade-in on scroll
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -132,7 +148,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.service-card, .tool-card, .pillar, .about__badge-card').forEach(el => {
+document.querySelectorAll('.service-card, .tool-card, .pillar, .about__badge-card, .testimonial-card').forEach(el => {
   el.classList.add('fade-in');
   observer.observe(el);
 });
