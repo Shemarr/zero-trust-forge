@@ -569,6 +569,9 @@ ul { list-style: none; }
 .tool-card:nth-child(4) .tool-card__logo { color: #ff6b6b; }  /* Kyverno: red */
 .tool-card:nth-child(5) .tool-card__logo { color: #844fba; }  /* Terraform: purple */
 .tool-card:nth-child(6) .tool-card__logo { color: #ef7b4d; }  /* Argo CD: orange */
+.tool-card:nth-child(7) .tool-card__logo { color: #00b4d8; }  /* Falco: teal blue */
+.tool-card:nth-child(8) .tool-card__logo { color: #4ade80; }  /* Trivy: green */
+.tool-card:nth-child(9) .tool-card__logo { color: #facc15; }  /* kube-bench: yellow */
 
 .tool-card__logo svg {
   width: 100%;
